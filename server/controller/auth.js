@@ -333,7 +333,7 @@ export const googleCallback = async (req, res) => {
       { expiresIn: "1h" }
     );
 
-    res.redirect(`hhttps://codequest-xi.vercel.app/Auth?token=${token}`);
+    res.redirect(`https://codequest-xi.vercel.app/Auth?token=${token}`);
   } catch (error) {
     console.error("Google OAuth Error:", error.response?.data || error.message);
     res.status(500).json({
