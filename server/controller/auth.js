@@ -8,7 +8,7 @@ dotenv.config();
 
 const CLIENT_ID =process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
-const REDIRECT_URI = "https://codequest-backend-qv7j.onrender.com/user/auth/google/callback";
+const REDIRECT_URI = "https://codequest-backend-qv7j.onrender.com/auth/google/callback";
 
 // Email configuration
 const transporter = nodemailer.createTransport({
