@@ -8,7 +8,7 @@ dotenv.config();
 
 const CLIENT_ID =process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
-const REDIRECT_URI = "http://localhost:5001/user/auth/google/callback";
+const REDIRECT_URI = "https://codequest-backend-qv7j.onrender.com/user/auth/google/callback";
 
 // Email configuration
 const transporter = nodemailer.createTransport({
@@ -333,7 +333,7 @@ export const googleCallback = async (req, res) => {
       { expiresIn: "1h" }
     );
 
-    res.redirect(`http://localhost:3000/Auth?token=${token}`);
+    res.redirect(`hhttps://codequest-xi.vercel.app/Auth?token=${token}`);
   } catch (error) {
     console.error("Google OAuth Error:", error.response?.data || error.message);
     res.status(500).json({

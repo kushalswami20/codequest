@@ -129,7 +129,7 @@ const Auth = () => {
   };
 
   const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:5001/user/auth/google";
+    window.location.href = "https://codequest-backend-qv7j.onrender.com/user/auth/google";
   };
 
   // Show time restriction message if access is restricted

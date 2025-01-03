@@ -11,7 +11,12 @@ const app = express();
 dotenv.config();
 app.use(express.json({ limit: "30mb", extended: true }))
 app.use(express.urlencoded({ limit: "30mb", extended: true }))
-app.use(cors());
+app.use(cors({
+    origin: ['http://localhost:3000','https://codequest-xi.vercel.app/'], 
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+  }));
 
 app.use("/user", userroutes);
 app.use('/questions', questionroutes)
