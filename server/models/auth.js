@@ -5,7 +5,19 @@ import mongoose from "mongoose";
     password:{type:String,required:true},
     about:{type:String},
     tags:{type:[String]},
-    joinedon:{type:Date,default:Date.now}
+    joinedon:{type:Date,default:Date.now},
+    videoUploadOTP: {
+      type: String,
+      default: null
+  },
+  videoUploadOTPExpiry: {
+   type: Date,
+   default: null
+},
+  isVideoVerified: {
+      type: Boolean,
+      default: false
+  }
  })
 
  export default mongoose.model("User",userschema)

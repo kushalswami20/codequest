@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Allroutes from './Allroutes'
 import { useDispatch } from 'react-redux';
 import { fetchallquestion } from './action/question';
+import UserTracker from './pages/Userprofile/UserTracker';
 function App() {
   const [slidein,setslidein]=useState(true)
   const dispatch=useDispatch()
@@ -30,6 +31,7 @@ useEffect(()=>{
       <Router>
       <Navbar handleslidein={handleslidein}/>
       <Allroutes slidein={slidein} handleslidein={handleslidein}/>
+      <UserTracker />
       </Router>
     </div>
   );

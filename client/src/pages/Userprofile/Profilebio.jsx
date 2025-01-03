@@ -1,4 +1,5 @@
 import React from 'react'
+// import "../../action/users"
 
 const Profilebio = ({currentprofile}) => {
   return (
